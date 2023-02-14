@@ -1,0 +1,1992 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Teko);
+* {
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg-left-color: #fffafd;
+    --bg-right-color: #f0f0f0;
+    --bg-btn-contact-color: #060606;
+    --bg-btn-color: #ffb600;
+    --bg-text-color: #999292;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+/* .container .row{
+    border-bottom: none;
+}
+.row{
+    border: none;
+} */
+/* Demo Styles */
+
+h1 {
+    font-size: 40px;
+}
+#body-inner{
+    min-width: 525px;
+}
+/* The Loader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    overflow: hidden;
+}
+.no-js #loader-wrapper {
+display: none;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #16a085;
+    -webkit-animation: spin 1.7s linear infinite;
+            animation: spin 1.7s linear infinite;
+    z-index: 11;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+    -webkit-animation: spin-reverse 0.6s linear infinite;
+            animation: spin-reverse 0.6s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+0% {
+    -webkit-transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(360deg);
+}
+}
+@keyframes spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+@-webkit-keyframes spin-reverse {
+0% {
+    -webkit-transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(-360deg);
+}
+}
+@keyframes spin-reverse {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(-360deg);
+}
+}
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 10;
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+/* Loaded styles */
+.loaded #loader-wrapper .loader-section.section-left {
+    transform: translateX(-100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    transform: translateX(100%);
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded #loader {
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all 0.3s 1s ease-out;
+}
+/*header*/
+.navbar-nav{
+    width: 100%;
+}
+.btn-contact-reponsive{
+    display: none;
+}
+.header-layout {
+    background-color: ;
+    background: linear-gradient(89deg, var(--bg-left-color), var(--bg-right-color));
+}
+.header-layout .menu-header{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 7%;
+    /* background-color: red; */
+}
+.header-layout .menu-header .logo-education{
+    width: 100%;
+    margin-top: 5%;
+}
+.header-layout .menu-header .logo-education img{
+    width: 100%;
+    object-fit: cover;
+}
+.header-layout .menu-header .header-contact{
+    line-height: 52px;
+    margin-top: 5%;
+}
+.header-layout .menu-header .header-contact a{
+    background: var(--bg-btn-contact-color);
+    padding: 9% 15%;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+}
+.header-layout .menu-header .header__menu-list{
+    width: 100%;
+}
+.header-layout .menu-header .header__menu-list .navbar-nav{
+    width: 80%;
+}
+.header-layout .menu-header .header__menu-list .navbar-nav.navbar-right{
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+.header-layout .menu-header .header__menu-list .navbar-nav.navbar-right .nav-item{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    background: #060606;
+    border-radius: 10px;
+}
+.header-layout .menu-header .header__menu-list .navbar-nav.navbar-right .nav-item a{
+    color: #fff; 
+    text-decoration: none;
+}
+.header-layout .menu-header .icon{
+    display: none;
+}
+.header-layout .menu-header .header__menu-list .nav-item{
+    margin-right: 5%;
+}
+.header-layout .menu-header .header__menu-list .nav-item .btn-contact{
+    background: var(--bg-btn-contact-color);
+    padding: 9% 15%;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+}
+.header-layout .menu-header .header__menu-list .nav-item:hover{
+    border-bottom: 1px solid var(--bg-btn-color);
+}
+.header-layout .slider-header{
+    padding: 3% 7%;
+    /* padding-bottom: 3%; */
+}
+.header-layout .slider-header .header__introduce-education{
+    width: 100%;
+    margin-top: 13%;
+}
+.header-layout .slider-header .header__introduce-education h1{
+    font-weight: bold;
+    font-size: 60px;
+    font-family: system-ui;
+}
+.header-layout .slider-header .header__introduce-education .about-education{
+    color: var(--bg-text-color);
+    font-size: 16px;
+    line-height: 29px;
+}
+.header-layout .slider-header .header__introduce-education .discover-more{
+    margin-top: 10%;
+}
+.header-layout .slider-header .header__introduce-education a{
+    background: var(--bg-btn-color);
+    padding: 16px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.header-layout .slider-header .header__image-introduce{
+    width: 100%;
+}
+.header-layout .slider-header .header__image-introduce img{
+    width: 100%;
+}
+.header-layout .slider-header .slider-right{
+    /* position: relative; */
+}
+.header-layout .slider-header .notification-email{
+    background: #fff;
+    border-radius: 10px;
+    padding: 3% 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    left: 0;
+    top: 25%;
+}
+.header-layout .slider-header .notification-email .icon-email{
+    position: absolute;
+    left: 36%;
+    bottom: 79%;
+}
+.header-layout .slider-header .notification-email .icon-email i{
+    background-color: #3859fd;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: auto;
+    width: 35px;
+    font-size: 13px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(56, 89, 253, 0.2), 0 6px 20px 0 rgba(56, 89, 253, 0.19);
+}
+
+.header-layout .slider-header .notification-email .title-notify{
+    text-align: center;
+}
+.header-layout .slider-header .notification-email .content-notify{
+    text-align: center;
+}
+.header-layout .slider-header .notification-email .title-notify span small{
+    display: inline-block;
+    font-weight: bold;
+}
+.header-layout .slider-header .notification-email .content-notify span{
+    display: inline-block;
+}
+.header-layout .slider-header .notification-likes{
+    width: 26%;
+    background: #fff;
+    /* padding-bottom: 4%; */
+    padding: 5% 0;
+    border-radius: 10px;
+    position: absolute;
+    top: 16%;
+    left: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.header-layout .slider-header .notification-likes .icon-like{
+    position: absolute;
+    bottom: 89%;
+    left: 37%;
+}
+.header-layout .slider-header .notification-likes .icon-like i{
+    background-color: #4fd6ff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: auto;
+    width: 35px;
+    font-size: 13px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(79, 214, 255, 0.2), 0 6px 20px 0 rgba(79, 214, 255, 0.19);
+}
+.header-layout .slider-header .notification-likes .total-like{
+    text-align: center;
+}
+.header-layout .slider-header .notification-likes .total-like p{
+    /* font-size: 24px; */
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    margin: 0;
+    /* display: inline-block; */
+}
+.header-layout .slider-header .notification-likes .content-like{
+    text-align: center;
+}
+.header-layout .slider-header .notification-likes .content-like span{
+    display: inline-block;
+}
+.header-layout .slider-header .notification-likes .avatar-students{
+    /* position: relative; */
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+.header-layout .slider-header .notification-likes .avatar-students .student{
+    height: 30px;
+    width: 30px;
+   
+    border-radius: 50%;
+    background-image: url('../image/student/Student-PNG-Image.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;  
+}
+.header-layout .slider-header .notification-likes .avatar-students .sd-1{
+    position: relative;
+    left: 11%;
+    background-color: pink;
+}
+.header-layout .slider-header .notification-likes .avatar-students .sd-2{
+    position: relative;
+    left: 3%;
+    background-color: rgb(192, 205, 205);
+}
+.header-layout .slider-header .notification-likes .avatar-students .sd-3{
+    position: relative;
+    right: 4%;
+    background-color: rgb(192, 205, 205);
+}
+.header-layout .slider-header .notification-likes .avatar-students .sd-4{
+    position: relative;
+    right: 11%;
+    background-color: rgb(192, 205, 205);
+}
+
+
+/*---we_have_to_help----*/
+#scoll-container .we-have-to-help{
+    padding: 10% 0;
+}
+#scoll-container .we-have-to-help .content__we-have-to-help{
+    padding: 0 7%;
+}
+#scoll-container .we-have-to-help .content__we-have-to-help .img-content{
+    width: 100%;
+    margin: auto;
+}
+#scoll-container .we-have-to-help .content__we-have-to-help .img-content img{
+    width: 100%;
+    object-fit: cover;
+}
+#scoll-container .we-have-to-help .content__we-have-to-help .text-content{
+    width: 100%;
+    padding: 23px 0;
+}
+#scoll-container .we-have-to-help .content__we-have-to-help .text-content h3{
+    font-weight: bold;
+    font-size: 27px;
+    font-family: system-ui;
+}
+#scoll-container .we-have-to-help .content__we-have-to-help .text-content p{
+    color: #999292;
+    margin: 9% 0;
+}
+#scoll-container .we-have-to-help .content__we-have-to-help .text-content a{
+    color: #fff;
+    background: var(--bg-btn-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(255, 182, 0, 0.2), 0 6px 20px 0 rgba(255, 182, 0, 0.19);
+}
+
+/*----trusted_companies----*/
+#scoll-container .trusted-companies h3{
+    text-align: center;
+    margin: 8% 0 2%;
+    font-weight: bold;
+    font-size: 25px;
+}
+#scoll-container .trusted-companies .content__trusted-companies{
+    padding: 0 7%;
+}
+#scoll-container .trusted-companies .companies{
+    /* margin-top: 2%; */
+}
+#scoll-container .trusted-companies .logo-relationships{
+    align-items: center;
+    /* margin: 0 100px; */
+}
+#scoll-container .trusted-companies .partner-logo-item{
+    /* width: 20%; */
+    display: flex;
+    flex: 0 0 130px;
+    
+    justify-content: center;
+}
+#scoll-container .trusted-companies .partner-logo-item img{
+    padding: 10px 15px;
+}
+#scoll-container .trusted-companies .partner-logo-item img:hover{
+    /* padding: 0% 5%; */
+    background: white;
+    border-radius: 17px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#scoll-container .trusted-companies .partner-logo-item img{
+    max-width: 100%;
+
+}
+#scoll-container .trusted-companies .partner-logo-item .active{
+    
+    
+}
+
+/*-----blog------*/
+.blog .porpular-departments{
+    background-color: #fffafd;
+    padding: 0 7% 9% 7%;
+}
+.blog .porpular-departments .title-ads-departments{
+    width: 29%;
+    margin: auto;
+    padding: 5% 0 4%;
+}
+.blog .porpular-departments .title-ads-departments h3{
+    font-weight: bold;
+    text-align: center;
+}
+.blog .porpular-departments .content-blog{
+    width: 100%;
+}
+
+.blog .porpular-departments .content-departments{
+    /* margin-left: 8%;
+    margin-right: 8%; */    
+    border: none;
+    background: #fff;
+    padding: 6% 0;
+    border-radius: 22px;
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* .blog .porpular-departments .box-card{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 7% 0 3% 0;
+} */
+.blog .porpular-departments .card{
+    width: 85%;
+    border: none;
+    margin: auto;
+}
+.blog .porpular-departments .card .card-image img{
+    width: 100%; 
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.blog .porpular-departments .card .card-title {
+    font-size: 20px;
+}
+.blog .porpular-departments .card .card-title  h4{
+    font-weight: bold;
+    font-family: system-ui;
+}
+.blog .porpular-departments .card .card-content p{
+    font-size: 11px;
+}
+.blog .porpular-departments .card .card-content a{
+    text-decoration: none;
+    color: var(--bg-btn-color);
+}
+.blog .porpular-departments .card .card-content i{
+    padding: 0 5%;
+}
+.blog .porpular-departments .view-all-department{
+    text-align: center;
+    /* margin-top: 2%;  */
+    margin-top: 5%;
+}
+.blog .porpular-departments .view-all-department a{
+    color: #fff;
+    background: var(--bg-btn-color);
+    padding: 15px 29px;
+    font-size: 11px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 #ffdb80, 0 6px 20px 0 #ffdb80;
+}
+
+/*-----teacher-----*/
+.teacher{
+    /* padding: 7% 0 5% 0; */
+}
+.teacher .intriduce-teacher{
+    padding: 7% 7% 5% 7%;
+}
+.teacher .intriduce-teacher .teacher__title-intriduce{
+    width: 100%;
+}
+.teacher .intriduce-teacher .teacher__title-intriduce h3{
+    font-weight: bold;
+    font-size: 28px;
+    font-family: system-ui;
+}
+.teacher .intriduce-teacher .teacher__view-all{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.teacher .intriduce-teacher .teacher__view-all a{
+    padding: 8% 16%;
+    background: var(--bg-btn-color);
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+.teacher .teacher__img-famous{
+    width: 100%;
+    margin: auto;
+    padding: 0 7% 5%; 
+}
+.teacher 
+.teacher__img-famous 
+.teacher__famous-profile 
+.circle-small-1,
+.circle-small-2,
+.circle-small-3{
+    height: 275px;
+    width: 275px;
+    border-radius: 50%;
+    position: absolute;
+    top: 19%;
+    left: 5%;
+}
+.teacher .teacher__img-famous .teacher__famous-profile .circle-small-1{
+    background: #c0b9ff;
+}
+.teacher .teacher__img-famous .teacher__famous-profile .circle-small-2{
+    background: #83fde1;
+}
+.teacher .teacher__img-famous .teacher__famous-profile .circle-small-3{
+    background: #f9c1a6;
+}
+.teacher 
+.teacher__img-famous 
+.teacher__famous-profile 
+.circle-big-1, 
+.circle-big-2,
+.circle-big-3{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 14%;
+    left: 1%;
+}
+.teacher 
+.teacher__img-famous 
+.teacher__famous-profile 
+.circle-big-1{
+    border: 1px solid #c0b9ff; 
+}
+.teacher 
+.teacher__img-famous 
+.teacher__famous-profile 
+.circle-big-2{
+    border: 1px solid #83fde1;
+}
+.teacher 
+.teacher__img-famous 
+.teacher__famous-profile 
+.circle-big-3{
+    border: 1px solid #f9c1a6;
+}
+
+.teacher .teacher__img-famous .teacher__famous-profile{
+    width: 100%;
+    position: relative;
+}
+.teacher .teacher__img-famous .img-teacher{
+    width: 100%;
+    height: 363px;
+    /* background: red; */
+    background-image: url('../image/teacher/teacher_PNG24.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 45%;
+}
+/* .teacher .teacher__img-famous .img-teacher img{
+    width: 100%;
+    object-fit: cover;
+} */
+.teacher .teacher__img-famous .profile-teacher{
+    margin-top: 12%;
+}
+.teacher .teacher__img-famous .profile-teacher h4{
+    text-align: center;
+    font-weight: bold;
+}
+.teacher .teacher__img-famous .profile-teacher p{
+    text-align: center;
+    color: #999292;
+}
+.teacher .teacher__img-famous .teacher__link-social{
+    text-align: center;
+}
+.teacher .teacher__img-famous .teacher__link-social i{
+    font-size: 12px;
+    margin: 0 1%;
+}
+/
+
+/*-----testimonial-----*/
+.testimonial{
+    /* height: 688px; */
+    padding: 5% 0 12% 0;
+}
+.testimonial .testimonial-content{
+    padding: 0 7%;
+}
+.testimonial .testimonial__carousel-slide-review {
+    width: 100%;
+}
+.testimonial .testimonial__carousel-slide-review .item{
+    width: 100%;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student{
+    width: 82%;
+    border-radius: 10px; 
+    height: 244px;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.down{
+    position: relative; 
+    top: 112px; 
+    left: 3px;
+    opacity: 0.5;
+    background: #fff; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+.testimonial .testimonial__carousel-slide-review .item .title-review{
+    width: 100%; 
+    padding: 7% 7% 0 7%;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student .title-review .avatar-student{
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%; 
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+    float: left;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.down .title-review .avatar-student{
+    background-image: url('../image/student/th.jpg'); 
+}
+
+.testimonial .testimonial__carousel-slide-review .item .profile-student{
+    float: left;
+    height: 60px; 
+    margin: 2% 0 0 3%; 
+    line-height: 16px;
+}
+.testimonial .testimonial__carousel-slide-review .item .profile-student .name-student{
+    font-weight: bold;
+    font-size: 18px;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.down .profile-student .name-student{
+    color: #999292;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.down .profile-student .position-student{
+    color: #999292;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student .title-review .rate-review{
+    height: 60px; 
+    margin-top: 2%;
+}
+.testimonial .testimonial__carousel-slide-review .item .content-review{
+    padding: 2% 7% 5% 7%;    
+    line-height: 30px;                                    
+    font-size: 18px;   
+    overflow: hidden;  
+    height: 100px;                                
+    
+}
+.testimonial .testimonial__carousel-slide-review .item .content-review p{
+    font-size: 16px;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.down .content-review{
+    color: #999292;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.top .content-review{
+    color: #fff;
+}
+.testimonial .testimonial__carousel-slide-review .review-student.top{
+    background: var(--bg-btn-color);
+    position: relative;
+    bottom: 241px;
+    left: 94px;
+    box-shadow: 0 4px 8px 0 rgba(255, 182, 0, 0.2), 0 6px 20px 0 rgba(255, 182, 0, 0.19);
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.top .title-review .avatar-student{
+    background-image: url('../image/student/th.jpg'); 
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.top .name-student{
+    color: #fff;
+}
+.testimonial .testimonial__carousel-slide-review .item .review-student.top .title-review .profile-student .position-student{
+    color: #fff;
+}
+
+.rate-review {
+    height: 60px; 
+    margin-top: 2%;
+}
+.rate-review .star{
+    font-family: Wingdings;
+    font-size: 23px;
+    color: #fff;
+    display: inline-block;
+}
+.rate-review .star:first-child:before{
+    color: transparent;
+   
+}
+.rate-review .star::before{
+    font-family: Wingdings;
+    font-size: 23px;
+    content: "\2605";
+}
+/**/
+/* .testimonial .testimonial__carousel-slide-review .feedback-student-2 .content-review{
+    margin: 5% 7%;
+}
+.testimonial .testimonial__carousel-slide-review .feedback-student-2 .content-review p{
+    line-height: 28px;
+    color: #999292;
+    font-size: 17px;
+} */
+.testimonial .testimonial__review-from-students{
+    width: 100%;
+    margin: auto;
+}
+.testimonial .testimonial__review-from-students .review-from-students{
+    padding: 23% 0;
+}
+.testimonial .testimonial__review-from-students .review-from-students h3{
+    font-weight: bold;
+    font-size: 27px;
+}
+.testimonial .testimonial__review-from-students .review-from-students p{
+    color: #999292;
+    line-height: 26px;
+    font-size: 14px;
+    margin-top: 10%;
+}
+.control-box{
+    position: absolute;
+    bottom: 37%;
+    right: 8%;
+}
+.control-box .carousel-control{
+    display: inline-block;
+    font-size: 34px;
+    font-weight: 200;
+    line-height: 20px;
+    padding: 4px 10px 0px;
+    position: static;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.control-box .carousel-control.left{
+    background: #fff;
+    border: 2px solid #060606;
+    color: #060606;
+}
+.control-box .carousel-control.right{
+    color: #fff;
+    border: 2px solid #060606;
+    background: #060606;
+}
+
+a, a:focus, a:active, a:hover, object, embed { outline: none; }
+:-moz-any-link:focus { outline: none; }
+input::-moz-focus-inner { border: 0; }
+/*-----cta-----*/
+.cta{
+    /* height: 155px; */
+    background-color: #424141;
+    /* height: 155px; */
+    ;
+    /* position: relative; */
+    
+}
+.cta .create-account{
+    
+    /* height: 155px; */
+    /* padding: 3% 0; */
+    /* height: 180px; */
+    padding: 0 7%;
+    position: relative;
+}
+.cta .create-account .cta-left{
+    /* height: 100%; */
+    padding: 50px 0;
+}
+.cta .create-account .cta-left .title-cta{
+    /* margin-top: 17%; */
+}
+.cta .create-account .cta-left .title-cta h3{
+    color: #fff;
+    font-weight: bold;
+    font-size: 29px;
+    font-family: system-ui;
+    /* margin-top: 13%; */
+    margin: 0;
+    line-height: 35px;
+}
+.cta .create-account .register-now{
+    /* margin-top: 48%; */
+    /* width: 100%; */
+    /* margin-top: 53%; */
+    display: flex;
+    align-items: center;
+}
+.cta .create-account .register-now a {
+    padding: 15px 25px;
+    background-color: var(--bg-btn-color);
+    border-radius: 10px;
+    color: #fff;
+    align-items: center;
+    text-decoration: none;
+}
+.cta .cta-right{
+    height: 100%;
+    position: relative;
+}
+.cta .cta-right .img-student{
+    height: 100%;
+}
+.cta .cta-right .img-student img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+
+/*-----footer-----*/
+.footer-layout .footer-wrapper{
+    background-color: #1c1c1c;
+    padding: 8% 0 2% 0;
+}
+.footer-layout .footer-wrapper .footer-content{
+    border-bottom: 1px solid #999292;
+}
+.footer-layout .footer-wrapper .footer-education .footer__logo-education{
+    width: 100%;
+}
+.footer-layout .footer-wrapper .footer-education .footer__logo-education img{
+    width: 50%;
+    object-fit: cover;
+}
+.footer-layout .footer-wrapper .footer-education .footer__introduce-education small{
+    color: #999292;
+}
+.footer-layout .footer-wrapper .footer__social-eduction{
+    margin: 15% 0;
+}
+.footer-layout .footer-wrapper .footer__social-eduction .link-social i{
+    background-color: #333;
+    border-radius: 50%;
+    color: #999292;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: auto;
+    width: 35px;
+    font-size: 13px;
+    text-align: center;
+}
+.footer-layout .footer-wrapper .footer__menu-list{
+    width: 80%;
+    margin: auto;
+}
+.footer-layout .footer-wrapper .footer__menu-list .menu-item{
+    color: #fff;
+    font-weight: bold;
+}
+.footer-layout .footer-wrapper .footer__menu-list .item-link{
+    color: #999292;
+    
+}
+.footer-layout .footer-wrapper .footer-contact .menu__item-contact{
+    color: #fff;
+    font-weight: bold;
+}
+.footer-layout .footer-wrapper .footer-contact span{
+    color: #fff;
+    font-weight: bold;
+}
+.footer-layout .footer-wrapper .footer-contact small{
+    color: #999292;
+}
+.footer-layout .footer-wrapper .footer-copyright{
+    margin-top: 1%;
+}
+.footer-layout .footer-wrapper .footer-copyright p{
+    color: #999292;
+    text-align: center;
+}
+/*-----------REPONSIVE----------*/
+
+/* @media screen and (min-width: 992px) and (max-width: 1199px){ */
+@media screen and (max-width: 1199px){
+    .header-layout .menu-header .logo-education{
+        margin: 0;
+        padding: 15px 0;
+    }
+    .notification-email{
+        width: 25%;
+    }
+    .header-layout .container div.slider-header div.row div.col-md-6 div.slider-right .notification-email .content-notify span small{
+        font-size: 67%;
+        /* color: #fff; */
+    }
+    .icon-email{
+        bottom: 76%;
+        left: 36%;
+    }
+}
+    
+@media screen and (max-width: 1199px){
+    .teacher .teacher__img-famous .img-teacher{
+        height: 349px;
+    }
+    .teacher .teacher__img-famous .teacher__famous-profile
+    .circle-small-1,
+    .circle-small-2,
+    .circle-small-3{
+        top: 22%;
+        left: 8%;
+        height: 250px;
+        width: 250px;
+    }
+    .teacher .teacher__img-famous .teacher__famous-profile 
+    .circle-big-1,
+    .circle-big-2,
+    .circle-big-3{
+        height: 280px;
+        width: 280px;
+        top: 15%;
+        left: 3%;
+    }
+}
+    
+@media screen and (max-width: 1199px){
+    .cta .create-account .img-student{
+        bottom: 36%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1023px){
+    /*header*/
+    .header-layout .menu-header .logo-education {
+        margin-top: 14px;
+    }
+    /*we-have-to-help*/
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content h3{
+        font-size: 23px;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content p{
+        font-size: 13px;
+    }
+    /*blog*/
+    .blog .porpular-departments .title-ads-departments h3{
+        font-size: 22px;
+    }
+    /*teacher*/
+    .teacher .intriduce-teacher .teacher__view-all a{
+        padding: 10px 16px;
+    }
+    .teacher .intriduce-teacher .teacher__title-intriduce h3 {
+        font-size: 22px;
+    }
+    .teacher .teacher__img-famous .teacher__famous-profile 
+    .circle-small-1,
+    .circle-small-2,
+    .circle-small-3{
+        height: 220px;
+        width: 220px;
+        top: 20%;
+        left: 6%;
+    }
+    .teacher .teacher__img-famous .teacher__famous-profile 
+    .circle-big-1, 
+    .circle-big-2, 
+    .circle-big-3{
+        height: 250px;
+        width: 250px;
+        left: 0;
+        top: 13%;
+    }
+    .teacher .teacher__img-famous .img-teacher{
+        height: 300px;
+        
+    }
+    /*testimonial*/
+    .testimonial .testimonial__carousel-slide-review .item 
+    .review-student{
+        width: 85%;
+        height: 200px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item 
+    .review-student .title-review .avatar-student{
+        width: 40px;
+        height: 40px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .profile-student{
+        height: 40px;
+        margin: 6px 0 0 9px;
+        line-height: 10px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .name-student{
+        font-size: 15px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .title-review .profile-student .position-student{
+        font-size: 11px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .title-review .rate-review{
+        height: 40px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .content-review{
+        margin-top: 2px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .content-review p{
+        margin: 0;
+        font-size: 13px;    
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student.top{
+        bottom: 200px;
+        left: 67px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student.down{
+        top: 94px;
+        left: 2px;
+    }
+    .control-box .carousel-control{
+        font-size: 30px;
+        line-height: 15px;
+        padding: 2px 8px 0px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+    .control-box{
+        bottom: 35%;
+        right: 7%;
+    }
+    .rate-review .star::before {
+        font-size: 20px;
+    }
+    .testimonial .testimonial__review-from-students .review-from-students h3{
+        font-size: 22px;
+        font-family: system-ui;
+    }
+    .testimonial .testimonial__review-from-students .review-from-students p{
+        font-size: 10px;
+    }
+    /*cta*/
+    .cta .create-account .cta-left .title-cta h3{
+        font-size: 24px;
+    }
+    .cta .create-account .register-now a{
+        font-size: 11px;
+        padding: 10px 20px;
+    }
+    .cta .cta-right .img-student img{
+        left: 32%;
+    }
+    /*991*/
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    
+    .header-layout .slider-header .notification-likes .avatar-students .student{
+        width: 23px;
+        height: 23px;
+    }
+    .header-layout .menu-header .logo-education{
+        margin: 0;
+    }
+    .header-layout .menu-header .logo-education{
+        padding: 20px 0;
+    }
+    .header-layout .menu-header .header__menu-list .navbar-nav.navbar-right .nav-item{
+        width: 100%;
+    }
+    .header-layout .slider-header .notification-likes .icon-like i{
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+    .header-layout .slider-header .notification-likes .icon-like {
+        left: 32%;
+    }
+    .navbar-expand-lg .navbar-nav{
+        flex-direction: row;
+    }
+    .header-layout .slider-header .notification-email .content-notify{
+        font-size: 10px;
+    }
+    .header-layout .slider-header .notification-email .title-notify{
+        font-size: 10px;
+    }
+    .header-layout .slider-header .header__introduce-education h1{
+        font-size: 30px;
+    }
+    .header-layout .slider-header .notification-email .icon-email i{
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+    .header-layout .slider-header .header__introduce-education .about-education{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .header-layout .slider-header .header__introduce-education a{
+        padding: 10px 20px;
+    }
+    .header-layout .slider-header .notification-email .icon-email{
+        left: 32%;
+    }
+    .header-layout .slider-header .notification-likes .total-like p{
+        font-size: 18px;
+    }
+    .header-layout .slider-header .notification-likes .content-like{
+        font-size: 10px;
+    }
+    /*trusted-companies*/
+    #scoll-container .trusted-companies .content__trusted-companies{
+        padding: 0;
+    }
+    #scoll-container .trusted-companies .partner-logo-item{
+        flex: 0 0 120px;
+    }
+    #scoll-container .trusted-companies .partner-logo-item img {
+        padding: 10px 20px;
+    }
+    /*we-have-to-help*/
+    #scoll-container .we-have-to-help .content__we-have-to-help{
+        padding: 0;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content h3{
+        font-size: 19px;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content p{
+        font-size: 8px;
+        line-height: 18px;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content a{
+        font-size: 11px;
+        padding: 10px 15px;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content{
+        padding: 6px 0;
+    }
+    /*blog*/
+    .blog .porpular-departments{
+        padding:0 0 9% 0;
+    }
+    .blog .porpular-departments .title-ads-departments h3 {
+        font-size: 19px;
+    }
+    .blog .porpular-departments .content-blog {
+        padding: 0 25px;
+    }
+    .blog .porpular-departments .card .card-title h4{
+        font-size: 11px;
+    }
+    .blog .porpular-departments .card .card-content p{
+        font-size: 9px;
+    }
+    .blog .porpular-departments .card .card-content a {
+        font-size: 10px;
+    }
+    .blog .porpular-departments .view-all-department a{
+        padding: 13px 17px;
+    }
+    /*teacher*/
+    .teacher .intriduce-teacher .teacher__title-intriduce h3{
+        font-size: 20px;
+    }
+    .teacher .intriduce-teacher .teacher__view-all a{
+        font-size: 11px;
+    }
+    .teacher .intriduce-teacher{
+        padding: 7% 0 5% 0;
+    }
+    .teacher .teacher__img-famous .img-teacher{
+        height: 215px;
+    }
+    .teacher .teacher__img-famous .teacher__famous-profile .circle-small-1, .circle-small-2, .circle-small-3{
+        width: 160px;
+        height: 160px;
+        left: 11px;
+        top: 56px;  
+    }
+    .teacher .teacher__img-famous .teacher__famous-profile .circle-big-1, .circle-big-2, .circle-big-3{
+        height: 180px;
+        width: 180px;
+        left: 1px;
+        top: 37px;
+    }
+    .teacher .teacher__img-famous .profile-teacher h4{
+        font-size: 15px;
+    }
+    .teacher .teacher__img-famous .profile-teacher p{
+        font-size: 10px;
+    }
+    .teacher .teacher__img-famous .teacher__link-social i{
+        font-size: 9px;
+    }
+    /*testimonial*/
+    .testimonial{
+        padding: 5% 0 7% 0;
+    }
+    .testimonial .testimonial-content{
+        padding: 0;
+    }
+    .testimonial .testimonial__review-from-students .review-from-students h3{
+        font-size: 19px;
+        font-family: system-ui;
+    }
+    .testimonial .testimonial__review-from-students .review-from-students p{
+        font-size: 9px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .title-review .avatar-student{
+        width: 40px;
+        height: 40px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .profile-student{
+        margin: 0 0 0 3px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .name-student{
+        font-size: 12px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .position-student{
+        font-size: 10px;
+    }
+    .rate-review .star::before {
+        font-size: 20px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .content-review p{
+        font-size: 11px;
+    }
+    .testimonial .testimonial__carousel-slide-review .review-student.top {
+        left: 65px;
+        bottom: 190px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student{
+        height: 192px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .title-review{
+        padding: 7% 5% 0 5%;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .content-review{
+        padding: 2% 5% 5% 5%;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student.down{
+        top: 78px;
+    }
+    .control-box{
+        bottom: 34%;
+        right: 8%;
+    }
+    .control-box .carousel-control{
+        width: 30px;
+        height: 30px;
+        line-height: 16px;
+        font-size: 28px;
+        padding: 3px 9px 0px;
+    }
+    /*cta*/
+    .cta .create-account{
+        padding: 0;
+    }
+    .cta .create-account .cta-left .title-cta h3{
+        font-size: 20px;
+    }
+    .cta .create-account .register-now a{
+        padding: 10px 8px;
+    }
+    .cta .create-account .cta-left{
+        padding: 30px 0;
+    }
+    .cta .cta-right .img-student img{
+        left: 22%;
+    }
+    /*footer*/
+    .footer-layout .footer-wrapper .footer__menu-list .item-link p{
+        font-size: 12px;
+    }
+    .footer-layout .footer-wrapper .footer__social-eduction .link-social i{
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+    }
+    /* .footer-layout .footer-wrapper .footer-contact span {
+        font-size: 10px;
+    } */
+    .footer-layout .footer-wrapper .footer-contact p small{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 767px){
+    .teacher .intriduce-teacher .teacher__view-all{
+        justify-content: start;
+    }
+}
+/*moblie*/
+@media screen and (max-width: 767px){
+    /* .reponsive{
+        display: block;
+    } */
+    .header-layout .menu-header .icon__menu-repo{
+        /* display: block; */
+        margin-top: 5%;
+        margin-left: 42%;
+    }
+    .header-layout .menu-header{
+        padding: 0;
+    }
+    .header-layout .menu-header .icon__menu-repo .icon{
+        display: block;
+    }
+    .header-layout .menu-header .header__menu-list .navbar-nav{
+        width: 100%;
+        margin: 0 0 10px 0;
+
+        
+    }
+    .header-layout .menu-header .header__menu-list .navbar-nav .nav-item a{
+        color: #fff;
+    }
+    .header-layout .menu-header .header__menu-list .navbar-nav.navbar-right{
+        width: 100%;
+    }
+    .header-layout .menu-header .header__menu-list .navbar-nav.navbar-right .nav-item{
+        width: 100%;
+    }
+    
+    .header-layout .menu-header .header__menu-list{
+        background: #363434;
+        /* margin-bottom: 8px; */
+    }
+    #navbarText{
+        display: block;
+    }
+    .menu-header .header__menu-list .nav-item{
+        width: 100%;
+    }
+    .menu-header .header__menu-list .nav-item a{
+        text-align: center;
+    }
+    .menu-header .header__menu-list{
+        display: none;
+    }
+    .menu-header .header__menu-list .nav-item .btn-contact-reponsive{
+        display: block;
+        /* padding: 3%; */
+    }
+    .menu-header .header__menu-list .nav-item .btn-contact-reponsive{
+        background: #060606;
+        padding: 2% 0;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 0,625em;
+    }
+    /* .nav-item .btn-contact a{
+        padding: 3%;
+    } */
+    .menu-header .header-contact{
+        display: none;
+    }
+    /* .collapse.reponsive{
+        display: block;
+    } */
+    .header-layout .slider-header{
+        padding: 15% 0;
+    }
+    .slider-header .header__introduce-education .about-education{
+        width: 80%;
+        line-height: 1,5625em;
+    }
+    .header-layout .slider-header .header__introduce-education h1 {
+        font-size: 30px;
+        width: 47%;
+    }
+    .header-layout .slider-header .slider-right{
+        position: relative;
+        bottom: 277px;
+
+    }
+    
+    .header-layout .slider-header .header__introduce-education{
+        position: relative;
+        top: 350px;
+    }
+    /* .header-layout .slider-header .slider-right .notification-email .title-notify small{
+        font-size: 65%;
+    } */
+    .header-layout .slider-header .notification-email .title-notify span small{
+        font-size: 65%;
+        font-weight: bold;
+    }
+    .header-layout .slider-header .notification-email .title-notify{
+        font-size: 18px;
+    }
+    .header-layout .slider-header .notification-email .content-notify{
+        font-size: 18px;
+    }
+    .header-layout .slider-header .notification-email .content-notify span small{
+        font-size: 51%;
+    }
+    .header-layout .slider-header .slider-right .notification-email{
+        top: 25%;
+        /* height: 4.625em; */
+        width: 28%;
+        /* height: 20%; */
+        padding: 2%;
+    }
+    .header-layout .slider-header .notification-email .icon-email i{
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .header-layout .slider-header .notification-email .icon-email {
+        bottom: 81%;
+        left: 39%;
+    }
+    .header-layout .slider-header .slider-right .notification-likes{
+        top: 15%;
+        left: 74%;
+        height: 109px;
+        width: 25%;
+    }
+    .header-layout .slider-header .slider-right .notification-likes .icon-like{
+        
+        bottom: 96px;
+        left: 47px;
+
+    }
+    .header-layout .slider-header .notification-likes{
+        padding: 12px 18px;
+    }
+    .header-layout .slider-header .notification-likes .icon-like i{
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+    .header-layout .slider-header .slider-right .notification-likes .total-like{
+        position: relative;
+        bottom: 0;
+    }
+    .header-layout .slider-header .slider-right .notification-likes .total-like p{
+        font-size: 20px;
+    }
+    .header-layout .slider-header .slider-right .notification-likes .content-like{
+        position: relative;
+        bottom: 0;
+        
+
+    }
+    .header-layout .slider-header .slider-right .notification-likes .content-like small{
+        font-size: 9px;
+    }
+    .header-layout .slider-header .slider-right .notification-likes .avatar-students{
+        position: relative;
+        bottom: 0;
+        display: inline-flex;
+    }
+    .header-layout .slider-header .notification-likes .avatar-students .student{
+        height: 24px;
+        width: 24px;
+    }
+    /*we-have-to-help*/
+    #scoll-container .we-have-to-help .content__we-have-to-help{
+        padding: 0;
+    }
+    #scoll-container .we-have-to-help{
+        padding-bottom: 20% ;
+    }
+    .we-have-to-help .content__we-have-to-help .text-content h3{
+        font-size: 26px;
+        /* width: 82%; */
+    }
+    .we-have-to-help .content__we-have-to-help .text-content p{
+        line-height: 25px;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content a{
+        padding: 5% 6%;
+    }
+    .we-have-to-help .content__we-have-to-help .box-content{
+        flex-direction: row-reverse;
+    }
+    /*trusted-companie*/
+    #scoll-container .trusted-companies .content__trusted-companies{
+        padding: 0;
+    }
+    #scoll-container .trusted-companies .partner-logo-item img{
+        height: 100%;
+    }
+    #scoll-container .trusted-companies h3{
+        font-size: 30px;
+        font-family: system-ui;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content h3{
+        font-size: 30px;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content p{
+        font-size: 16px;
+    }
+    #scoll-container .trusted-companies .companies .logo-relationships{
+        flex-direction: column;
+    }
+    #scoll-container .trusted-companies .companies .logo-relationships .partner-logo-item{
+        justify-content: center;
+        display: flex;
+    
+    }
+    #scoll-container .trusted-companies .partner-logo-item .active{
+        padding: 1% 3%;
+    }
+    /*blog*/
+    #scoll-container .blog .porpular-departments .title-ads-departments{
+        width: 100%;
+    }
+    .blog .porpular-departments .content-departments{
+        margin-bottom: 5%;
+    }
+    #scoll-container .blog .porpular-departments .view-all-department a{
+        padding: 18px 58px;
+    }
+    
+
+    #scoll-container .blog .porpular-departments .view-all-department{
+        margin-top: 8%;
+    }
+    #scoll-container .blog .porpular-departments{
+        padding-bottom: 25%;
+    }
+    /*teacher*/
+    .teacher .intriduce-teacher{
+        padding: 7% 0 5% 0;
+    }
+    #scoll-container .teacher .intriduce-teacher .teacher__title-intriduce h3{
+        font-size: 26px;
+    }
+    .teacher .intriduce-teacher .teacher__view-all{
+        justify-content: start;
+    }
+    #scoll-container .teacher .intriduce-teacher .teacher__view-all a{
+        font-size: 15px;
+        padding: 15px 25px;
+        /* padding: 6% 12%; */
+    }
+    .teacher .teacher__img-famous .img-teacher{
+        height: 442px;
+    }
+    .teacher .teacher__img-famous .teacher__famous-profile{
+        margin-top: 10%;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .famous-teacher .profile-teacher{
+        margin-top: 7%;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .famous-teacher .profile-teacher h4{
+        font-size: 20px;
+    }
+    #scoll-container .teacher .teacher__img-famous .img-teacher{
+        width: 68%;
+        margin: auto;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile 
+    .circle-small-1,
+    .circle-small-2,
+    .circle-small-3
+    {
+        top: 125px;
+        left: 65px;
+        height: 320px;
+        width: 320px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile 
+    .circle-big-1,
+    .circle-big-2,
+    .circle-big-3{
+        top: 96px;
+        height: 350px;
+        width: 350px;
+        left: 49px;
+    
+    }
+    /*testimonial*/
+    .testimonial .testimonial-content{
+        padding: 0;
+    }
+    .testimonial .testimonial__carousel-slide-review {
+        height: 500px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item{
+        height: 100%;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .box-feedback{
+        height: 100%;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .feedback-student-1{
+        height: 100%;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student{
+        
+        width: 92%;
+    }
+    .testimonial .testimonial__carousel-slide-review .review-student.top{
+        left: 21px;
+    }
+    .testimonial .testimonial__review-from-students .review-from-students{
+        position: relative;
+        bottom: 509px;
+    }
+    .testimonial .testimonial__carousel-slide-review{
+        position: relative;
+        top: 336px;
+    }
+    .testimonial .testimonial__review-from-students .review-from-students p{
+        line-height: 27px;
+        font-size: 20px;
+        margin-top: 7%;
+    }
+    .cta .create-account{
+        padding: 0;
+    }
+    .cta .cta-right .img-student img{
+        /* position: unset; */
+    }
+    .btn-register{
+        flex-direction: column-reverse;
+    }
+    .cta .create-account .cta-left .title-cta h3{
+        font-size: 25px;
+    }
+    .cta .create-account .register-now a{
+        padding: 10px 10px;
+    }
+    .cta .cta-right .img-student img{
+        width: 138%;
+    }
+    .footer-layout .footer-wrapper .footer__social-eduction{
+        margin: 0;
+        position: absolute;
+        top: 672px;
+        /* bottom: 0; */
+        /* padding: 0 0 0 12px; */
+        /* padding: 0; */
+        left: 193px;
+    }
+    .footer-layout .footer-wrapper .footer-contact{
+        /* text-align: center; */
+        margin-left: 14px;
+    }
+}
+@media screen and  (max-width: 575px){
+    .header-layout .slider-header .slider-right .notification-likes .icon-like{
+        left: 54px;
+    }
+    .header-layout .slider-header .slider-right .notification-likes .content-like small{
+        font-size: 12px;
+    }
+    #scoll-container .trusted-companies .partner-logo-item img{
+        height: 90%;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content h3{
+        font-size: 35px;
+    }
+    #scoll-container .we-have-to-help .content__we-have-to-help .text-content p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .blog .porpular-departments .card .card-title h4{
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .blog .porpular-departments .card .card-content p{
+        font-size: 17px;
+        line-height: 35px;
+    }
+    .blog .porpular-departments .card .card-content a{
+        font-size: 19px;
+        line-height: 50px;
+    }
+    #scoll-container .teacher .intriduce-teacher .teacher__title-intriduce h3{
+        font-size: 28px;
+    }
+    .teacher .teacher__img-famous .img-teacher{
+        height: 470px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-small-1, .circle-small-2, .circle-small-3{
+        top: 122px;
+        left: 66px;
+        height: 350px;
+        width: 350px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile 
+    .circle-big-1, 
+    .circle-big-2, 
+    .circle-big-3{
+        top: 88px;
+        
+        left: 48px;
+        height: 385px;
+        width: 385px;
+
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .famous-teacher .profile-teacher h4{
+        font-size: 25px;
+    }
+    .teacher .teacher__img-famous .profile-teacher p{
+        font-size: 18px;
+    }
+    .teacher .teacher__img-famous .teacher__link-social i{
+        font-size: 15px;
+    }
+    .testimonial .testimonial-content {
+        padding-bottom: 50%;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student{
+        height: 600px;
+        width: 92%;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .profile-student{
+        margin: 0;
+        padding: 17px 0 0 137px;
+        line-height: 33px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .title-review .avatar-student{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .testimonial .testimonial__carousel-slide-review .item .content-review{
+        padding: 48px 40px;
+        height: 407px;
+        line-height: 68px;
+    }
+    
+    .testimonial .testimonial__carousel-slide-review .item .review-student .name-student{
+        font-size: 40px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .position-student{
+        font-size: 30px;
+        height: 100px;
+    }
+    .testimonial .testimonial__carousel-slide-review .review-student.top{
+        bottom: 579px;
+        left: 18px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .profile-student{
+        float: unset;
+        height: 100px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .title-review .rate-review{
+        height: 52px;
+        padding: 25px 0;
+        flex-direction: row-reverse;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .content-review p{
+        font-size: 26px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student.down{
+        left: 8px;
+        top: 150px;
+    }
+    .rate-review .star::before{
+        font-size: 35px;
+        padding-left: 10px;
+    }
+    .control-box{
+        
+        top: 630px;
+        right: 3px;
+
+    }
+    .control-box .carousel-control{
+        line-height: 30px;
+        font-size: 50px;
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    .cta .cta-right .img-student img{
+        width: 100%;
+    }
+    .cta .cta-right .img-student img{
+        left: 220px;
+    }
+    .cta .create-account .cta-left{
+        padding: 50px 0 50px 19px;
+    }
+    .cta .create-account .cta-left .title-cta h3{
+        font-size: 38px;
+    }
+    .cta .create-account .register-now a{
+        padding: 23px 77px;
+        font-size: 25px;
+    }
+    .cta .create-account .register-now{
+        padding: 40px 0;
+    }
+    .footer-layout .footer-wrapper .footer-education{
+        padding: 0 15px;
+    }
+    .footer-layout .footer-wrapper .footer-education .footer__introduce-education p{
+        font-size: 25px;
+    }
+    .footer-layout .footer-wrapper .footer__menu-list{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .footer-layout .footer-wrapper .footer__menu-list .menu-item{
+        font-size: 30px;
+    }
+    .footer-layout .footer-wrapper .footer-contact .menu__item-contact{
+        font-size: 30px;
+    }
+    .footer-layout .footer-wrapper .footer__menu-list .item-link p{
+        font-size: 25px;
+    }
+    .footer-layout .footer-wrapper .footer-contact 
+    .address-email,
+    .address-location,
+    .address-call{
+        font-size: 25px;
+    }
+    .footer-layout .footer-wrapper .footer__social-eduction .link-social i{
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        line-height: 50px;
+    }
+    .footer-layout .footer-wrapper .footer__social-eduction{
+        top: 1059px;
+        left: 27px;
+    }
+    .footer-layout .footer-wrapper .footer-contact{
+        padding-bottom: 20%;
+    }
+    
+}
+@media  screen and (max-width: 564px) {
+    
+    .teacher .teacher__img-famous .img-teacher{
+        height: 450px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-small-1, .circle-small-2, .circle-small-3{
+        top: 104px;
+        left: 60px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-big-1, .circle-big-2, .circle-big-3{
+        top: 71px;
+        left: 41px;
+    }
+}
+
+@media screen and (max-width: 541px){
+    
+    .teacher .teacher__img-famous .img-teacher{
+        height: 445px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-small-1, .circle-small-2, .circle-small-3{
+        top: 98px;
+        left: 50px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-big-1, .circle-big-2, .circle-big-3{
+        top: 64px;
+        left: 32px;
+    }
+    .header-layout .slider-header .slider-right .notification-likes .icon-like{
+        left: 43px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .name-student{
+        font-size: 35px;
+    }
+    .testimonial .testimonial__carousel-slide-review .item .review-student .position-student{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 537px){
+    .teacher .teacher__img-famous .img-teacher{
+        height: 435px;
+    }
+    .header-layout .slider-header .slider-right .notification-likes .content-like small{
+        font-size: 10px;
+    }
+    /* #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-small-1, .circle-small-2, .circle-small-3{
+        
+        top: 102px;
+        left: 56px;
+    }
+    
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-small-1, .circle-small-2, .circle-small-3{
+        top: 96px;
+        left: 46px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-big-1, .circle-big-2, .circle-big-3{
+        top: 67px;
+        left: 31px;
+    } */
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-small-1, .circle-small-2, .circle-small-3{
+        top: 139px;
+        left: 71px;
+        height: 300px;
+        width: 300px;
+    }
+    #scoll-container .teacher .teacher__img-famous .teacher__famous-profile .circle-big-1, .circle-big-2, .circle-big-3{
+        height: 330px;
+        width: 330px;
+        top: 111px;
+        left: 56px;
+    }
+    
+}
